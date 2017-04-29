@@ -142,9 +142,24 @@ MongoDB 是文档型数据库(Document Database)，不是关系型数据库(Rel
 # 项目展示
 
 ```
-首页
 
-![text]()
+登录
+
+![text](https://raw.githubusercontent.com/zq381368330/MarkdownPhotos/master/login.png)
+
+详情页
+
+![text](https://github.com/zq381368330/MarkdownPhotos/blob/master/detail.png)
+
+
+后台列表页
+
+![text](https://raw.githubusercontent.com/zq381368330/MarkdownPhotos/master/houtailist.png)
+
+
+后台录入页
+
+![text](https://raw.githubusercontent.com/zq381368330/MarkdownPhotos/master/houtailuru.png)
 ```
 
 

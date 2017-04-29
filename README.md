@@ -45,7 +45,7 @@ node app.js
 
 最后打开浏览器，输入`localhost:3000`即可访问。效果图如下：
 
-![text]()
+![text](https://raw.githubusercontent.com/zq381368330/MarkdownPhotos/master/index.png)
 
 
 

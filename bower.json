@@ -1,0 +1,25 @@
+{
+  "name": "movie_demo",
+  "homepage": "y",
+  "authors": [
+    "zhouqin"
+  ],
+  "description": "movie_demo",
+  "main": "",
+  "keywords": [
+    "movie"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,84 @@
+.home
+  header.header
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .row
+          .hidden-xs.hidden-sm.col-md-3.col-lg-3
+            .navbar-header.navbar-left
+              a.navbar-brand-mc(href='http://localhost:3000/')
+                img(src='/libs/images/logo.png', alt='logo',href='http://localhost:3000/')
+          .hidden-xs.visible-sm-block.col-sm-2
+            .navbar-header.navbar-left
+              a.navbar-brand-mc(href='#')
+                img(src='', alt='logo')
+          .visible-xs-block.col-xs-2
+            .navbar-header.navbar-left
+              a.navbar-brand-mc(href='#')
+                img(src='', alt='logo')
+          .col-xs-8.col-sm-5.col-md-5.col-lg-5
+            // <div class="navbar-search navbar-left">
+            form.navbar-form-mc(method='get', action='###', role='search')
+              .input-group.input-group-nav
+                input#input-search.form-control(type='text', name='key', placeholder='查找电影...')
+                span.input-group-btn
+                  a.btn(role='button', aria-label='Left Align', onclick="$(this).closest('form').submit()")
+                    span.glyphicon.glyphicon-search(aria-hidden='true')
+            // </div>
+          .hidden-xs.col-sm-5.col-md-4.col-lg-4
+        
+              ul.nav.navbar-nav.pull-right
+              if user
+                p.navbar-text.navbar-right
+                    span 欢迎您,#{user.name}
+                    span &nbsp;|&nbsp;
+                    a.navbar-link(href="/logout") 登出
+              else  
+                p.navbar-text.navbar-right
+                    a.navbar-link(href="#",data-toggle="modal",data-target="#signupModal") 注册
+                    span &nbsp;|&nbsp;
+                    a.navbar-link(href="#",data-toggle="modal",data-target="#signinModal") 登录
+              
+                 
+          .visible-xs-block.col-xs-2
+            .nav.nav-hamburger.pull-right
+              a.dropdown-toggle(href='###', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true')
+              ul.dropdown-menu.pull-right
+                li
+                  a(href='###') 首页
+                li
+                  a(href='###') 
+                li#xs-nav-notice
+                  a(href='###') 公告
+               
+
+#signupModal.modal.fade
+  .modal-dialog
+    .modal-content
+      form(method="POST",action="/user/signup")
+        .modal-header 注册
+        .modal-body
+          .form-group
+            label(for="signupName") 用户名
+            input#signupName.form-control(name="user[name]",type="text")
+           .form-group
+            label(for="signupPassword") 密码
+            input#signupPassword.form-control(name="user[password]",type="text")
+        .model-footer
+          button.btn.btn-default(type="button",data-dismiss="modal") 关闭
+          button.btn.btn-success(typr="submit") 提交
+#signinModal.modal.fade
+  .modal-dialog
+    .modal-content
+      form(method="POST",action="/user/signin")
+        .modal-header 登录
+        .modal-body
+          .form-group
+            label(for="signinName") 用户名
+            input#signupName.form-control(name="user[name]",type="text")
+           .form-group
+            label(for="signinPassword") 密码
+            input#signupPassword.form-control(name="user[password]",type="text")
+        .model-footer
+          button.btn.btn-default(type="button",data-dismiss="modal") 关闭
+          button.btn.btn-success(typr="submit") 提交
